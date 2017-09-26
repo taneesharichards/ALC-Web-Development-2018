@@ -62,3 +62,51 @@ nav ul li a:hover{
 .active{
     background-color:orange;
 }
+
+footer{
+    width:100%;
+    background-color:antiquewhite;
+    color:black;
+    text-align:center;
+    padding:20px 0;
+}
+
+.keepOpen{
+    clear:both;
+}
+
+/* index.html */
+
+img#home-img{
+    width:290px;
+    display:block;
+    margin:15px;
+    float:left;
+}
+
+h2#h2-home{
+    float:left;
+}
+
+p#p-home{
+    float:left;
+    width:58%;
+}
+
+/* about.html */
+
+img#about-img{
+    width:425px;
+    display: block;
+    margin:15px;
+    float:left;
+}
+
+h2#h2-about{
+    float:left;
+}
+
+p#p-about{
+    float:left;
+    width:52%;
+}

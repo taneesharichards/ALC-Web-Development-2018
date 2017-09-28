@@ -15,6 +15,9 @@ div#container{
 }
 
 header{
+    background-image:url('../images/large_pumpkins.jpg');
+    background-position:center;
+    background-size:1025px;
     background-color:antiquewhite;
     width:100%;
     height:150px;
@@ -27,11 +30,17 @@ header h1{
     color:;
     text-shadow:1px 1px 1px orange;
     margin:0;
+    font-size:40px;
+    /* font-family: 'Oxygen', sans-serif; */
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Pontano Sans', sans-serif; */
+
+
 }
 
 nav {
     width:100%;
-    background-color:antiquewhite;
+    background-color:bisque;
     clear:both;
     margin:0;
 }
@@ -78,7 +87,7 @@ footer{
 /* index.html */
 
 img#home-img{
-    width:290px;
+    width:400px;
     display:block;
     margin:15px;
     float:left;
@@ -86,27 +95,47 @@ img#home-img{
 
 h2#h2-home{
     float:left;
+    margin-bottom:0;
+    margin-top:10px;
+    /* font-family: 'Oxygen', sans-serif;
+    font-family: 'Quicksand', sans-serif; */
+    font-family: 'Pontano Sans', sans-serif;
+
+
 }
 
 p#p-home{
     float:left;
     width:58%;
+    margin-top:10px;
+    /* font-family: 'Oxygen', sans-serif;
+    font-family: 'Quicksand', sans-serif; */
+    font-family: 'Pontano Sans', sans-serif;
 }
 
 /* about.html */
 
 img#about-img{
-    width:425px;
+    width:460px;
     display: block;
     margin:15px;
     float:left;
 }
 
 h2#h2-about{
+    margin-bottom:0px;
+    margin-top:0px;
     float:left;
+    /* font-family: 'Oxygen', sans-serif;
+    font-family: 'Quicksand', sans-serif; */
+    font-family: 'Pontano Sans', sans-serif;
 }
 
 p#p-about{
     float:left;
     width:52%;
+    margin-top:10px;
+    /* font-family: 'Oxygen', sans-serif;
+    font-family: 'Quicksand', sans-serif; */
+    font-family: 'Pontano Sans', sans-serif;
 }

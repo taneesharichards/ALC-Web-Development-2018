@@ -5,6 +5,7 @@ body{
     background-color:antiquewhite;
     margin:0;
     padding:0;
+    font-family:sans-serif;
 }
 
 div#container{
@@ -175,4 +176,39 @@ figcaption{
     padding-bottom: 15px;
     font-family: sans-serif;
     font-size:15px;
+}
+
+/* contact.html */
+form{
+    float:left;
+}
+
+h2#h2-contact{
+    width:100%;
+    margin-left:10px;
+    
+}
+form#form-contact{
+    margin-left:10px;
+}
+
+form input, textarea{
+    margin-bottom:5px;
+}
+
+button#button-contact{
+    width:80px;
+    height:40px;
+    font-weight:500;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+div#map{
+    float:right;
+    margin-top:0;
+    margin-right:20px;
+}
+
+div#map h2{
+    margin-top:0;
 }

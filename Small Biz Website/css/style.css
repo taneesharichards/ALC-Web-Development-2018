@@ -18,6 +18,7 @@ div#container{
 header{
     background-image:url('../images/large_pumpkins.jpg');
     background-position:center;
+    box-shadow:3px 0px 3px #e6cdb0;
     background-size:1025px;
     background-color:antiquewhite;
     width:100%;

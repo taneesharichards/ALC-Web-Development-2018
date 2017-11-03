@@ -8,3 +8,44 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li
 }
 
 /* Universal Style */
+
+body{
+    background-color:#e5e5e5;
+}
+
+div#container{
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    width:100%;
+    background-color:#e5e5e5;
+    
+}
+
+header#blog-head{
+    width:100%;
+    height:300px;
+    font-family:sans-serif;
+    text-align:center;
+    background-color:#e5e5e5;
+}
+
+/* Blog Post */
+div#blog-post{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    margin:15px 0;
+    padding: 10px
+    background-color:#e5e5e5;
+    box-shadow: 3px 3px 3px lightgray;
+}
+
+img#post-img{
+    display: block;
+    margin: 5px;
+    width: 150px;
+    height:150px;
+    background-color: aliceblue;
+}

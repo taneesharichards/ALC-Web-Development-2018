@@ -10,7 +10,7 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li
 /* Universal Style */
 
 body{
-    background-color:#f2f2f2;
+    background-color:#ffffff;
 }
 
 div#container{
@@ -18,7 +18,7 @@ div#container{
     flex-direction:column;
     margin:auto;
     width:100%;
-    background-color:#f2f2f2;
+    background-color:#ffffff;
     
 }
 
@@ -28,6 +28,7 @@ header#blog-head{
     font-family:sans-serif;
     text-align:center;
     background-color:aliceblue;
+    box-shadow: 3px 3px 3px lightgray;
 }
 
 /* Blog Post */
@@ -47,7 +48,7 @@ img#post-img{
     display: block;
     margin: 5px;
     width: 150px;
-    height:150px;
+    Height: 107px;
     background-color: aliceblue;
 }
 

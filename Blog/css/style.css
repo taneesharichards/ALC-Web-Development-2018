@@ -39,7 +39,7 @@ div#blog-post{
     width:100%;
     margin:15px 0;
     padding: 10px;
-    background-color:#f2f2f2;
+    background-color:#f5f5f5;
     box-shadow: 3px 3px 3px lightgray;
 }
 
@@ -47,8 +47,8 @@ img#post-img{
     align-self:flex-start;
     display: block;
     margin: 5px;
-    width: 150px;
-    Height: 107px;
+    width: 550px;
+    Height: 305px;
     background-color: aliceblue;
 }
 
@@ -101,3 +101,14 @@ p#post-text{
 
 
 }
+
+video#post-vid{
+    margin-top: -15px;
+    width:555px;
+    height:350px;
+}
+
+iframe#post-vid-youtube{
+    margin-top:5px;
+}
+

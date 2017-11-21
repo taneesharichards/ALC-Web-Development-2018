@@ -46,7 +46,7 @@ div#blog-post{
 img#post-img{
     align-self:flex-start;
     display: block;
-    margin: 5px;
+    margin:5px;
     width: 550px;
     Height: 305px;
     background-color: aliceblue;
@@ -103,12 +103,24 @@ p#post-text{
 }
 
 video#post-vid{
+    margin:5px;
     margin-top: -15px;
     width:555px;
     height:350px;
 }
 
 iframe#post-vid-youtube{
+    margin:5px;
     margin-top:5px;
+}
+
+audio#post-audio{
+    margin: 5px;
+    width:560px
+}
+
+audio#post-music{
+    margin:5px;
+    width:560px;
 }
 

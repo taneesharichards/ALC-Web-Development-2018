@@ -56,8 +56,9 @@ header img#profile_img{
     border-radius:100%;
     background-color:#fff;
     align-self:flex-end;
-    margin-left:16px;
+    margin-left:10px;
     margin-top:50px;
+    margin-bottom:10px;
 
 }
 
@@ -73,6 +74,7 @@ header div#profile_info h2{
     width:100%;
     order:1;
     font-size:2em;
+    margin-bottom:8px;
 }
 
 header div#profile_info h4{
@@ -186,10 +188,17 @@ div#content div.post div.post-foot h5.p-comments .com-p{
     order:3;
 }
 
-div#content div.post div.post-foot h5.p-likes{
+div#content div.post div.post-foot sup.num-likes{
     order:2;
-    margin:6px;
+    margin:3px;
     color:#000;
+    
+}
+
+div#content div.post div.post-foot .like{
+    margin-bottom:4px;
+    height: 12px;
+    
 }
 footer{
     width:100%;

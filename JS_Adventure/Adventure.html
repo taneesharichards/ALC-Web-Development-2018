@@ -31,10 +31,10 @@
                 player.firstname = prompt("What's your first name?");
                 player.lastname = prompt("What's your last name?");
                 alert("Welcome, "+player.firstname+" "+player.lastname+"." );
-                var beginAdv = confirm("Are you ready to begin?")
+                var beginAdv = confirm("Are you ready to begin The Escape?")
                 
                 if(beginAdv){
-                    alert("Each stage has a name. These names are displayed with capital letters. For instance, one stage may be called 'House'. The message could be written as 'You see a House in front of you'. After leaving the house, you may navigate back to it by typing 'go to house' or 'house'. Make sure to remember the stage names, or it could be easy to get lost!")
+                    alert("IMPORTANT: Each stage has a name. These names are displayed with capital letters. For instance, one stage may be called 'House'. The message could be written as 'You see a House in front of you'. After leaving the house, you may navigate back to it by typing 'go to house' or 'house'. Make sure to remember the stage names, or it could be easy to get lost!")
                     DarkRoom();
                 }
                 else{
@@ -43,7 +43,7 @@
                 }
             }
             
-            // Start "DarkRoom" function
+            // Start "DarkRoom" STAGE function
             function DarkRoom(){
                 var darkRoom = prompt("You look around. You're sitting in a chair in the middle of a small, Dark Room. You can't remember how you got here. From the light coming through a small window towards the top of the wall, you can see a door on the opposite side of the room.").toLowerCase();
                 
@@ -70,7 +70,7 @@
                     DarkRoom();
                 }
                 else{
-                    alert("I don't understand ' "+darkRoom+" '");
+                    alert("I don't understand '"+darkRoom+"'");
                     DarkRoom();
                 }
             }
@@ -117,7 +117,7 @@
                     Door();
                 }
                 else{
-                    alert("I don't understand ' "+door+" '");
+                    alert("I don't understand '"+door+"'");
                     Door();
                 }
             }
@@ -127,7 +127,7 @@
             function LeftRoom(){
                 var leftroom = prompt("The room's door is cracked open. There is light coming from the room. You listen quietly, but you can't hear anything coming from inside the room.").toLowerCase();
                 
-                if(leftroom == "go in room" || leftroom == "go in the room" || leftroom == "go into the room" || leftroom == "go into room" || leftroom == "go in" || leftroom == "go inside room" || leftroom == "go inside the room" || leftroom == "go inside"){
+                if(leftroom == "go in room" || leftroom == "go in the room" || leftroom == "go into the room" || leftroom == "go into room" || leftroom == "go in" || leftroom == "go inside room" || leftroom == "go inside the room" || leftroom == "go inside" || leftroom == "walk in" || leftroom == "walk inside room" || leftroom == "walk into room"){
                     alert("You push the door open and look at the inside of the room.");
                     BedRoom();
                 }
@@ -146,37 +146,64 @@
                     LeftHallway();
                 }
                 else{
-                    alert("I don't understand ' "+leftroom+" '");
+                    alert("I don't understand '"+leftroom+"'");
                     LeftRoom();
                 }
             }
             // End "LeftRoom" function
             
             // Start "Hallway" function
-            function LeftHallway
-            var leftHallway = prompt("You walk down the hall, and the hall ends at a huge door.").toLowerCase();You try everything to get the door open, but the door won't move. You can feel a small keyhole underneath the knob.").toLowerCase();
-            if(leftHallway == "open door" || lefthallway == "push door" || lefthallway == "push door open" ||)
-            // Start "BedRoom" function
+            function LeftHallway(){
+            var lefthallway = prompt("You walk down the hall, and the hall ends at a huge door.").toLowerCase();
+            
+            if(leftHallway == "open door" || leftHallway == "push door" || leftHallway == "push door open" || leftHallway == "go through" || leftHallway == "go" || leftHallway == "open"){
+                KeyholeDoor();
+            }
+            else if(leftHallway == "go to the room" || leftHallway == "go to room" || leftHallway == "room" || leftHallway == "the room"){
+                    BedRoom();
+            }
+            else if(leftHallway == "dark room" || leftHallway == "go to dark room" || leftHallway == "go to the dark room" || leftHallway == "the dark room"){
+                    DarkRoom();
+            }
+            else{
+                    alert("I don't understand '"+leftHallway+"'");
+                    LeftHallway();
+            }
+            }
+            // Start "BedRoom" STAGE function
             function BedRoom(){
-                var bedroom = ("In the corner of the Room, there is a lamp. There is a bed in the Room, and beside the bed, there is a nightstand. The nightstand has drawers, and on the nightstand, you see a cup of water.").ToLowerCase();
+                var bedroom = prompt("In the corner of the Room, there is a lamp. There is a bed in the Room, and beside the bed, there is a nightstand. The nightstand has drawers. You remember this place. You've been here before.").toLowerCase();
                 
                 if(bedroom == "go to nightstand" || bedroom == "nightstand"){
                     alert("You walk to the nightstand.");
-                    NightstandOne();
-                }
-                else if(bedroom == "drink water"){
-                    alert("You drink the water and find yourself looking at the nightstand");
-                    NightstandTwo();
+                    Nightstand();
                 }
                 else if(bedroom == "inventory"){
                     alert(inventory);
                     BedRoom();
                 }
+                else if(bedroom == "dark room" || bedroom == "go to dark room" || bedroom == "go to the dark room" || bedroom == "the dark room"){
+                    DarkRoom();
+                }
                 else{
-                    alert("I don't understand ' "+bedroom+" '");
+                    alert("I don't understand '"+bedroom+"'");
                     BedRoom();
+                }
             }
+            
             // End "BedRoom" function
+            
+            // RIGHT HALLWAY
+            
+            // Start "RightRoom" function
+            RightRoom(){
+                var rightroom = prompt("The door is made of glass and the entire inside of the room is visible. The room can't be more than 20x20 ft. The room looks clean and white. You can see various types of equipment. You remember this place. You've seen it before.").toLowerCase();
+                
+                if(rightroom == "go in room" || rightroom == "go in the room" || rightroom == "go into the room" || rightroom == "go into room" || rightroom == "go in" || rightroom == "go inside room" || rightroom == "go inside the room" || rightroom == "go inside" || rightroom == "walk in" || rightroom == "walk inside room" || rightroom == "walk into room"){
+                    alert("You push lightly on the glass and the door slides open.");
+                    BedRoom();
+                }
+            }
         </script>
     </body>
 

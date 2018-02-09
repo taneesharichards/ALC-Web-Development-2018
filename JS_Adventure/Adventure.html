@@ -11,13 +11,20 @@
             
             var inventory = {
                 flashlight:0,
-                water:0,
+                key:0,
+                paper:0,
+                rope:0,
+                notebook:0,
                 
             }
             
             var player = {
                 firstname:"",
                 lastname:"",
+            }
+            
+            var invList = function(){
+                alert("flashlight = "+ inventory.flashlight + "\nkey = "+ inventory.key);
             }
             
 //            var flyingmonkey = {
@@ -34,7 +41,7 @@
                 var beginAdv = confirm("Are you ready to begin The Escape?")
                 
                 if(beginAdv){
-                    alert("IMPORTANT: Each stage has a name. These names are displayed with capital letters. For instance, one stage may be called 'House'. The message could be written as 'You see a House in front of you'. After leaving the house, you may navigate back to it by typing 'go to house' or 'house'. Make sure to remember the stage names, or it could be easy to get lost!")
+                    alert("IMPORTANT: Each stage has a name. These names are displayed with capital letters. For instance, one stage may be called 'House'. The message could be written as 'You see a House in front of you'. After leaving the house, you may navigate back to it by typing 'go to house' or 'house'. Make sure to remember the stage names, or it could be easy to get lost! Also, when you come across a place, you can choose to either go to that place or not. To bypass it, just give a command to not go to that place. Ex 'don't go'.")
                     DarkRoom();
                 }
                 else{
@@ -65,8 +72,8 @@
                 else if(darkRoom == "go to the room" || darkRoom == "go to room" || darkRoom == "room" || darkRoom == "the room"){
                     BedRoom();
                 }
-                else if(darkRoom == "inventory"){
-                    alert(inventory);
+                else if(darkRoom == "inventory" || darkRoom == "show inventory"){
+                    invList();
                     DarkRoom();
                 }
                 else{
@@ -112,8 +119,8 @@
                     alert("You go right. You follow the hallway until you reach a room off to your right.");
                     RightRoom();
                 }
-                else if(door == "inventory"){
-                    alert(inventory);
+                else if(door == "inventory" || door == "show inventory"){
+                    invList();
                     Door();
                 }
                 else{
@@ -131,12 +138,12 @@
                     alert("You push the door open and look at the inside of the room.");
                     BedRoom();
                 }
-                else if(leftroom == "keep walking" || leftroom == "don't go in" || leftroom == "dont go in" || leftroom == "don't go" || leftroom == "dont go" || leftroom == "don't go in room" || leftroom == "dont go in room" || leftroom == "dont go into room" || leftroom == "don't go into room"){
+                else if(leftroom == "dont go in room" || leftroom == "don't go in room" || leftroom == "dont go in the room" || leftroom == "don't go in the room" || leftroom == "dont go into the room" || leftroom == "don't go into the room" || leftroom == "dont go into room" || leftroom == "don't go into room" || leftroom == "dont go in" || leftroom == "don't go in" || leftroom == "dont go inside room" || leftroom == "don't go inside room" || leftroom == "dont go inside the room" || leftroom == "don't go inside the room" || leftroom == "dont go inside" || leftroom == "don't go inside" || leftroom == "dont walk in" || leftroom == "don't walk in" || leftroom == "dont walk inside room" || leftroom == "don't walk inside room" || leftroom == "dont walk into room" || leftroom == "don't walk into room" || leftroom == "keep walking" || leftroom == "don't go" || leftroom == "dont go"){
                     LeftHallway();
                     
                 }
-                else if(leftroom == "inventory"){
-                    alert(inventory);
+                else if(leftroom == "inventory" || leftroom == "show inventory"){
+                    invList();
                     LeftRoom();
                 }
                 else if(leftroom == "dark room" || leftroom == "go to dark room"){
@@ -165,6 +172,10 @@
             else if(leftHallway == "dark room" || leftHallway == "go to dark room" || leftHallway == "go to the dark room" || leftHallway == "the dark room"){
                     DarkRoom();
             }
+            else if(lefthallway == "inventory" || lefthallway == "show inventory"){
+                invList();
+                LeftHallway();
+            }
             else{
                     alert("I don't understand '"+leftHallway+"'");
                     LeftHallway();
@@ -178,10 +189,10 @@
                     alert("You walk to the nightstand.");
                     Nightstand();
                 }
-                else if(bedroom == "inventory"){
-                    alert(inventory);
+                else if(bedroom == "inventory" || bedroom == "show inventory"){
+                    invList();
                     BedRoom();
-                }
+                }   
                 else if(bedroom == "dark room" || bedroom == "go to dark room" || bedroom == "go to the dark room" || bedroom == "the dark room"){
                     DarkRoom();
                 }
@@ -193,15 +204,31 @@
             
             // End "BedRoom" function
             
+            function Nightstand(){
+                var nightstand = prompt("You walk to the nightstand. You can see two drawers. You open them. In the top one, you see a piece of paper and a flashlight. In the bottom one, you see a notebook, a silver key, and a rope.").toLowerCase();
+                
+                if(nightstand == "grab paper")
+            }
             // RIGHT HALLWAY
             
             // Start "RightRoom" function
-            RightRoom(){
+            function RightRoom(){
                 var rightroom = prompt("The door is made of glass and the entire inside of the room is visible. The room can't be more than 20x20 ft. The room looks clean and white. You can see various types of equipment. You remember this place. You've seen it before.").toLowerCase();
                 
                 if(rightroom == "go in room" || rightroom == "go in the room" || rightroom == "go into the room" || rightroom == "go into room" || rightroom == "go in" || rightroom == "go inside room" || rightroom == "go inside the room" || rightroom == "go inside" || rightroom == "walk in" || rightroom == "walk inside room" || rightroom == "walk into room"){
                     alert("You push lightly on the glass and the door slides open.");
-                    BedRoom();
+                    GlassRoom();
+                }
+                else if(rightroom == "dont go in room" || rightroom == "don't go in room" || rightroom == "dont go in the room" || rightroom == "don't go in the room" || rightroom == "dont go into the room" || rightroom == "don't go into the room" || rightroom == "dont go into room" || rightroom == "don't go into room" || rightroom == "dont go in" || rightroom == "don't go in" || rightroom == "dont go inside room" || rightroom == "don't go inside room" || rightroom == "dont go inside the room" || rightroom == "don't go inside the room" || rightroom == "dont go inside" || rightroom == "don't go inside" || rightroom == "dont walk in" || rightroom == "don't walk in" || rightroom == "dont walk inside room" || rightroom == "don't walk inside room" || rightroom == "dont walk into room" || rightroom == "don't walk into room" || rightroom == "keep walking" || rightroom == "don't go" || rightroom == "dont go"){
+                    RightHallway();
+                }
+                else if(rightroom == "show inventory" || rightroom == "inventory"){
+                    invList();
+                    RightRoom();
+                }
+                else{
+                    alert("I don't understand '"+rightroom+"'");
+                    RightRoom();
                 }
             }
         </script>

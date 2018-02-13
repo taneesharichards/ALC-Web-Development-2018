@@ -18,13 +18,21 @@
                 
             }
             
+            var items = {
+                flashlight:"flashlight",
+                key:"key",
+                paper:"paper",
+                rope:"rope",
+                notebook:"notebook",
+            }
+            
             var player = {
                 firstname:"",
                 lastname:"",
             }
             
             var invList = function(){
-                alert("flashlight = "+ inventory.flashlight + "\nkey = "+ inventory.key);
+                alert("flashlight = "+ inventory.flashlight + "\nkey = "+ inventory.key + "\npaper = "+ inventory.paper + "\nrope = "+ inventory.rope + "\nnotebook = "+ inventory.notebook);
             }
             
 //            var flyingmonkey = {
@@ -205,9 +213,16 @@
             // End "BedRoom" function
             
             function Nightstand(){
-                var nightstand = prompt("You walk to the nightstand. You can see two drawers. You open them. In the top one, you see a piece of paper and a flashlight. In the bottom one, you see a notebook, a silver key, and a rope.").toLowerCase();
+                var nightstand = prompt("In the top drawer, you see a "+items.paper+" and a "+items.flashlight+". In the bottom one, you see a "+items.notebook+", a "+items.key+", and a "+items.rope+".").toLowerCase();
                 
-                if(nightstand == "grab paper")
+                if(nightstand == "grab paper" || nightstand == "paper" || nightstand == "read paper" || nightstand == "look at paper" || nightstand == "inspect paper"){
+                    alert("You grab the paper and see some writing on it. \n'"+player.firstname+",\nHow are things going? It's been a minute since you've sent me anything. I was just checking up on you! How's the new job? Still good? Let me know!\n-Mark'" );
+                    items.paper
+                }
+                else{
+                    alert("I don't understand '"+nightstand+"'");
+                    Nightstand();
+                }
             }
             // RIGHT HALLWAY
             

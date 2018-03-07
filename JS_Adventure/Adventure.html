@@ -125,11 +125,11 @@
                 var door = prompt("You open the door quietly and look out into the dark Hallway. To both your left and right, the Hallway looks very long, but it's difficult to see because of the darkness.").toLowerCase();
                 
                 if(door == "go left" || door == "left" || door == "go to the left"){
-                    alert("You go left. You follow the hallway until you reach a room off to your left.");
+                    alert("You go left. You follow the Hallway until you reach a room off to your left.");
                     LeftRoom();
                 }
                 else if( door == "go right" || door == "right" || door == "go to the right"){
-                    alert("You go right. You follow the hallway until you reach a room off to your right.");
+                    alert("You go right. You follow the Hallway until you reach a room off to your right.");
                     RightRoom();
                 }
                 else if(door == "room" || door == "go to the room" || door == "go to room" || door == "the room"){
@@ -211,7 +211,7 @@
                     alert("You walk to the nightstand.");
                     Nightstand();
                 }
-                else if(bedroom == "open drawers" || bedroom == "open drawer" || bedroom == "go to drawer" || bedroom == "drawer" || bedroom == "go to drawers"){
+                else if(bedroom == "open drawers" || bedroom == "open drawer" || bedroom == "go to drawer" || bedroom == "drawer" || bedroom == "go to drawers" || bedroom == "open nightstand"){
                     Nightstand();
                 }
                 else if(bedroom == "inventory" || bedroom == "show inventory" || bedroom == "check inventory"){
@@ -277,12 +277,12 @@
             }
             
             function GlassRoom(){
-            var glassRoom = alert("As you step into the Glass Room, the lights become brighter. As you walk in further to get a better look around the room, the door slides shut behind you. You walk around and notice glass fixtures in cetain areas of the room. You notice different-colored buttons next to these fixtures. You notice a red button, a green button, and a blue button.");
+            var glassRoom = alert("You step into the Glass Room, and the lights become brighter. As you walk in further to get a better look around the room, the door slides shut behind you. You walk around and notice glass fixtures in cetain areas of the room. You notice different-colored buttons next to these fixtures. You notice a red button, a green button, and a blue button.");
             
             var button = prompt("Press them? Or don't press them?").toLowerCase();
             
             switch(button){
-                case "press the buttons":
+                case "press them":
                     Buttons();
                     break;
                 case "don't press them":
@@ -293,6 +293,16 @@
                     GlassRoom();
                     
                          }
+            }
+            
+            function Buttons(){
+                var buttons = prompt("Which buttons and which order do you want to push them in? List out the colors in the order you want to push them.").toLowerCase;
+                
+                if(buttons == "blue red green red blue green" || buttons == "blue, red, green, red, blue, green"){
+                    alert("The glass fixtures light up. In them, you can see images. Images of places that you've seen before. You realize that they have been watching you. You turn around and go for the door, and it opens. You run out into the hallway. They are there waiting for you. Everything goes dark.");
+                    DarkRoom();
+                }
+                
             }
             
         </script>

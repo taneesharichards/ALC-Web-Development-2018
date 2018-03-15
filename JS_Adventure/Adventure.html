@@ -277,7 +277,7 @@
             }
             
             function GlassRoom(){
-            var glassRoom = alert("You step into the Glass Room, and the lights become brighter. As you walk in further to get a better look around the room, the door slides shut behind you. You walk around and notice glass fixtures in cetain areas of the room. You notice different-colored buttons next to these fixtures. You notice a red button, a green button, and a blue button.");
+            var glassRoom = alert("As you step into the Glass Room, the lights become brighter. When you walk in further to get a better look around the room, the door slides shut behind you. You walk around and notice glass fixtures in cetain areas of the room. You notice different-colored buttons next to these fixtures. You stop at one. You see a red button, a green button, and a blue button.");
             
             var button = prompt("Press them? Or don't press them?").toLowerCase();
             
@@ -287,6 +287,7 @@
                     break;
                 case "don't press them":
                     alert("You walk past the buttons and over to the door. You push, but the door won't open.");
+                    GlassRoom();
                     break;
                 default:
                     alert("I don't understand ' "+button+" '");
@@ -299,10 +300,22 @@
                 var buttons = prompt("Which buttons and which order do you want to push them in? List out the colors in the order you want to push them.").toLowerCase;
                 
                 if(buttons == "blue red green red blue green" || buttons == "blue, red, green, red, blue, green"){
-                    alert("The glass fixtures light up. In them, you can see images. Images of places that you've seen before. You realize that they have been watching you. You turn around and go for the door, and it opens. You run out into the hallway. They are there waiting for you. Everything goes dark.");
-                    DarkRoom();
+                    alert("The glass fixtures light up. In them, you can see images. Images of places that you've seen before. You realize that they have been watching you. Your heart starts to pound.");
+                    Outside();
                 }
                 
+            }
+            
+            function Small Door(){
+                var smallDoor = confirm("You notice that not only has the entrance door opened, but so has a new door, over to your right. It must have opened when you pushed the colored buttons. Do you want to go through it?")
+                
+                if(smallDoor){
+                    alert("You walk through the door into a hallway. As you move through the hallway, you begin to run. You see a door at the end. You reach the door which is labeled 'EXIT'");
+                    Exit();
+                }
+                else{
+                    alert("You look around the room.")
+                }
             }
             
         </script>

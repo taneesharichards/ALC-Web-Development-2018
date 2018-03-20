@@ -35,8 +35,7 @@ body {
 
 .main input[type="radio"]:hover + .box {
     transition: all .4s ease-out;
-    border-radius:13px%;
-}
+    border-radius:13px%;}
 
 .main input[type="radio"]:checked + .box {
     transition: ease a;; 0.4s;

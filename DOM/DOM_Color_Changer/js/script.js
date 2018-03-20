@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <body>
-    
-        <script>
+
             //VARIABLES
             /* grabs the id of the first modal and set it equal to modal */
             var modal = document.getElementById("modal");
@@ -69,9 +65,3 @@
                     document.querySelector('input[name="colors"]:checked').checked = false;
                 }
             };
-
-
-        </script>
-    </body>
-
-</html>

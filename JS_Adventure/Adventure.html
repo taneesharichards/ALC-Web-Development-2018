@@ -301,12 +301,12 @@
                 
                 if(buttons == "blue red green red blue green" || buttons == "blue, red, green, red, blue, green"){
                     alert("The glass fixtures light up. In them, you can see images. Images of places that you've seen before. You realize that they have been watching you. Your heart starts to pound.");
-                    Outside();
+                    SmallDoor();
                 }
                 
             }
             
-            function Small Door(){
+            function SmallDoor(){
                 var smallDoor = confirm("You notice that not only has the entrance door opened, but so has a new door, over to your right. It must have opened when you pushed the colored buttons. Do you want to go through it?")
                 
                 if(smallDoor){
@@ -314,9 +314,20 @@
                     Exit();
                 }
                 else{
-                    alert("You look around the room.")
+                    alert("You look around the room.");
                 }
             }
+            
+            function Exit(){
+                var exit = confirm("Do you want to go through the door?)
+               
+                if(exit){
+                    alert("You push the door open and walk out. You have escaped! Congratulations!");
+                }
+                else{
+                    alert("You return back to the Glass Room.");
+                    GlassRoom();
+                                   
             
         </script>
     </body>

@@ -35,10 +35,11 @@ body {
 
 .main input[type="radio"]:hover + .box {
     transition: all .4s ease-out;
-    border-radius:13px%;}
+    border-radius:13px;
+}
 
 .main input[type="radio"]:checked + .box {
-    transition: ease a;; 0.4s;
+    transition: ease all 0.4s;
     border-radius: 100%;
 }
 
@@ -47,7 +48,7 @@ body {
     height: 50px;
     border-radius: 5px;
     /* see if this works */
-    will-change: transition;
+    will-change: transform;
     display: inline-block;
     cursor: pointer;
     position: relative;
@@ -108,7 +109,11 @@ body {
 }
 
 .modal {
-    display:none;
+    display:grid;
+    visibility:hidden;
+    opacity:0;
+    transition: visibility linear 0.5s, opacity 0.5s linear;
+    transition-delay:0.1s;
     position: fixed;
     width: 100%;
     height: 100%;

@@ -32,7 +32,7 @@
                 lastname:"",
             }
             var use = {
-                notebook:"'Broken glass\nRain pouring\nGreen grass\nRaking the leaves\nBelgium\nGreat Country'"
+                notebook:"'Broken glass\nRain pouring\nGreen grass\nRaking the leaves\nBelgium\nGreat Country'",
                 paper:"'Hey" +player.firstname+ ",\nHow are things going? It's been a minute since you've sent me anything. I was just checking up on you! How's the new job? Let me know!\n-Mark'"
             }
             
@@ -346,12 +346,18 @@
             }
             
             function Buttons(){
-                var buttons = prompt("Which buttons and which order do you want to push them in? List out the colors in the order you want to push them.").toLowerCase;
+                var buttons = prompt("Which buttons and which order do you want to push them in? List out the colors in the order you want to push them without commas.").toLowerCase;
                 
-                if(buttons == "blue red green red blue green" || buttons == "blue, red, green, red, blue, green"){
-                    alert("The glass fixtures light up. In them, you can see images. Images of places that you've seen before. You realize that they have been watching you. Your heart starts to pound.");
+                if(buttons == "blue red green red blue green"){
+                    alert("The glass fixtures light up. In them, you can see images. Images of the rooms that you've been in. You realize that they have been watching you. Your heart starts to pound.");
                     SmallDoor();
                 }
+                else{
+                     var nothing = confirm("Nothing happens. Do you want to continue pressing the buttons?")
+                    if{
+                        
+                    }
+                        }
                 
             }
             
@@ -368,7 +374,7 @@
             }
             
             function Exit(){
-                var exit = confirm("Do you want to go through the door?)
+                var exit = confirm("Do you want to go through the door?")
                
                 if(exit){
                     alert("You push the door open and walk out. You have escaped! Congratulations!");

@@ -32,6 +32,7 @@
                 lastname:"",
             }
             var use = {
+                notebook:"'Broken glass\nRain pouring\nGreen grass\nRaking the leaves\nBelgium\nGreat Country'"
                 paper:"'Hey" +player.firstname+ ",\nHow are things going? It's been a minute since you've sent me anything. I was just checking up on you! How's the new job? Let me know!\n-Mark'"
             }
             
@@ -236,6 +237,54 @@
                     alert("You grab the paper and see some writing on it. \n"+use.paper);
                     items.paper --;
                     inventory.paper ++;
+                    var stay = confirm("Would you like to stay at the nightstand?")
+                    if(stay){
+                        Nightstand();
+                    }
+                    else{
+                        BedRoom();
+                    }
+                }
+                else if(nightstand == "grab flashlight" || nightstand == "flashlight" || nightstand == "take flashlight"){
+                    alert("You grab the flashlight.");
+                    items.flashlight --;
+                    inventory.flashlight ++;
+                    var stay = confirm("Would you like to stay at the nightstand?")
+                    if(stay){
+                        Nightstand();
+                    }
+                    else{
+                        BedRoom();
+                    }
+                }
+                else if(nightstand == "grab key" || nightstand == "key" || nightstand == "take key"){
+                    alert("You grab the key.");
+                    items.key --;
+                    inventory.key ++;
+                    var stay = confirm("Would you like to stay at the nightstand?")
+                    if(stay){
+                        Nightstand();
+                    }
+                    else{
+                        BedRoom();
+                    }
+                }
+                else if(nightstand == "grab rope" || nightstand == "rope" || nightstand == "take rope"){
+                    alert("You grab the rope.");
+                    items.rope --;
+                    inventory.rope ++;
+                    var stay = confirm("Would you like to stay at the nightstand?")
+                    if(stay){
+                        Nightstand();
+                    }
+                    else{
+                        BedRoom();
+                    }
+                }
+                else if(nightstand == "grab notebook" || nightstand == "notebook" || nightstand == "read notebook" || nightstand == "look at notebook" || nightstand == "inspect notebook" || nightstand == "get notebook" || nightstand == "take notebook"){
+                    alert("You grab the notebook. As you flip through the pages, you realize that it's full of journal entries. You stop at one page.\n"+use.notebook);
+                    items.notebook --;
+                    inventory.notebook ++;
                     var stay = confirm("Would you like to stay at the nightstand?")
                     if(stay){
                         Nightstand();

@@ -52,7 +52,7 @@
                 player.firstname = prompt("What's your first name?");
                 player.lastname = prompt("What's your last name?");
                 alert("Welcome, "+player.firstname+" "+player.lastname+"." );
-                var beginAdv = confirm("Are you ready to begin The Escape?")
+                var beginAdv = confirm("Are you ready to begin The Escape?");
                 
                 if(beginAdv){
                     alert("IMPORTANT: Each stage has a name. These names are displayed with capital letters. For instance, one stage may be called 'House'. The message could be written as 'You see a House in front of you'. After leaving the house, you may navigate back to it by typing 'go to house' or 'house'. Make sure to remember the stage names, or it could be easy to get lost! Also, when you come across a place, you can choose to either go to that place or not. To bypass it, just give a command to not go to that place. Ex 'don't go'.")
@@ -204,6 +204,35 @@
                     LeftHallway();
             }
             }
+            
+            function KeyholeDoor(){
+                var keyhole = prompt("The door is locked. You can feel a key hole.").toLowerCase();
+                
+                if(keyhole == "use key"){
+                    alert("You unlock the door and walk out. They've been waiting for you.");
+                    items.key ++;
+                    iventory.key --;
+                    DarkRoom();
+                }
+                else if(keyhole == "dark room"){
+                    DarkRoom();
+                }
+                else if(keyhole == "glass room"){
+                    GlassRoom();
+                }
+                else if(keyhole == "room"){
+                    Room();
+                }
+                else if(keyhole == "inventory" || keyhole == "show inventory"){
+                invList();
+                KeyholeDoor();
+            }
+                else{
+                    alert("I don't understand ' "+keyhole+" '");
+                    KeyholeDoor();
+                }
+                
+            }
             // Start "BedRoom" STAGE function
             function BedRoom(){
                 var bedroom = prompt("In the corner of the Room, there is a lamp. There is a bed in the Room, and beside the bed, there is a nightstand. The nightstand has drawers. You remember this place. You've been here before.").toLowerCase();
@@ -335,7 +364,7 @@
                     Buttons();
                     break;
                 case "don't press them":
-                    alert("You walk past the buttons and over to the door. You push, but the door won't open.");
+                    alert("You walk past the buttons and over to the door.");
                     GlassRoom();
                     break;
                 default:
@@ -346,23 +375,25 @@
             }
             
             function Buttons(){
-                var buttons = prompt("Which buttons and which order do you want to push them in? List out the colors in the order you want to push them without commas.").toLowerCase;
+                var buttons = prompt("Which buttons and which order do you want to push them in? List out the colors in the order you want to push them without commas.").toLowerCase();
                 
                 if(buttons == "blue red green red blue green"){
                     alert("The glass fixtures light up. In them, you can see images. Images of the rooms that you've been in. You realize that they have been watching you. Your heart starts to pound.");
                     SmallDoor();
                 }
+                else if(buttons == "show inventory" || buttons == "inventory"){
+                    invList();
+                    Buttons();
+                }
                 else{
-                     var nothing = confirm("Nothing happens. Do you want to continue pressing the buttons?")
-                    if{
-                        
-                    }
-                        }
+                    alert("Nothing happens.")
+                     GlassRoom();
                 
+            }
             }
             
             function SmallDoor(){
-                var smallDoor = confirm("You notice that not only has the entrance door opened, but so has a new door, over to your right. It must have opened when you pushed the colored buttons. Do you want to go through it?")
+                var smallDoor = confirm("You notice that not only has the entrance door opened, but so has a new door, over to your right. It must have opened when you pushed the colored buttons. Do you want to go through it?");
                 
                 if(smallDoor){
                     alert("You walk through the door into a hallway. As you move through the hallway, you begin to run. You see a door at the end. You reach the door which is labeled 'EXIT'");
@@ -375,13 +406,15 @@
             
             function Exit(){
                 var exit = confirm("Do you want to go through the door?")
-               
+              
                 if(exit){
                     alert("You push the door open and walk out. You have escaped! Congratulations!");
                 }
                 else{
                     alert("You return back to the Glass Room.");
                     GlassRoom();
+                }
+            }
                                    
             
         </script>

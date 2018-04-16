@@ -32,5 +32,9 @@ header h1{
 nav {
     width:100%;
     background-color:#F4F4F5;
+    clear:both;
+    font-family: 'Barlow', sans-serif;
+    font-size:14px;
+    box-shadow: 3px 3px 3px #dddddd;
 }
 

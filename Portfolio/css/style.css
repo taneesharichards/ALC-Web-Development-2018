@@ -1,7 +1,7 @@
 body{
     background-color:#F4F4F5;
     margin: 0;
-    padding: 0;
+    padding-top:0px;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -38,29 +38,33 @@ header h1 a{
 div#content{
     
 }
+ nav {
+    width:100%;
+    background-size:82%;
+    background-color:#F4F4F5;
+    clear:both;
+    font-family: 'Barlow', sans-serif;
+    text-align:center;
+    font-size:14px;
+    box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
+    margin: 10px;
+}
+
 
 @media only screen and (max-width: 767px){
     nav {
+    float:center;
     width:100%;
     background-color:#F4F4F5;
     clear:both;
+    text-align:center;
     font-family: 'Barlow', sans-serif;
     font-size:14px;
     box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
-    margin: 10px;
+    margin: 2%;
 }
 }
-@media only screen and (min-width: 1200px){
-    nav {
-    width:100%;
-    background-color:#F4F4F5;
-    clear:both;
-    font-family: 'Barlow', sans-serif;
-    font-size:14px;
-    box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
-    margin: 10px;
-}
-}
+
 
 nav ul {
     margin:0;
@@ -69,24 +73,37 @@ nav ul {
     list-style:none;
 }
 
-@media only screen and (max-width: 600px){
+nav ul li{
+    float:left;
+    width:20%;
+}
+
+@media only screen and (max-width: 767px){
     nav ul li {
         float:center;
-    }
-}
-@media only screen and (min-width: 992px){
-    nav ul li {
-        float:left;
+        width:100%;
     }
 }
 
+
 nav ul li a {
-    display:block;
+    display:inline-block;
     color:#60767A;
     text-align:center;
+    padding: 5% 25%;
     text-decoration:none;
-    padding: 14px 94.5px;
-    min-width:150px;
+}
+
+@media only screen and (max-width: 767px){
+nav ul li a {
+    display:inline-block;
+    float:center;
+    color:#60767A;
+    text-align:center;
+    padding:5% 30%;
+    text-decoration:none;
+    width:auto;
+}
 }
 
 nav ul li a:hover{
@@ -96,6 +113,7 @@ nav ul li a:hover{
 
 .active{
     background-color:#EDEDED;
+    width:20%;
 }
 
 container {

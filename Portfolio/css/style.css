@@ -22,7 +22,7 @@ header{
 
 header h1{
     text-align:center;
-    padding-top:50px;
+    padding:50px;
     color:#78CED8;
     margin:0;
     font-size:20px;
@@ -48,6 +48,7 @@ div#content{
     font-size:14px;
     box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
     margin: 10px;
+    padding-top: 30px;
 }
 
 
@@ -61,7 +62,7 @@ div#content{
     font-family: 'Barlow', sans-serif;
     font-size:14px;
     box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
-    margin: 2%;
+
 }
 }
 
@@ -75,7 +76,7 @@ nav ul {
 
 nav ul li{
     float:left;
-    width:20%;
+    width:25%;
 }
 
 @media only screen and (max-width: 767px){
@@ -92,6 +93,7 @@ nav ul li a {
     text-align:center;
     padding: 5% 25%;
     text-decoration:none;
+    width:40%;
 }
 
 @media only screen and (max-width: 767px){
@@ -102,18 +104,20 @@ nav ul li a {
     text-align:center;
     padding:5% 30%;
     text-decoration:none;
-    width:auto;
+    width:40%;
+    
 }
 }
 
 nav ul li a:hover{
     background-color:#EDEDED;
     box-shadow: 1px 1px 10px #dddddd;
+    width:40%;
 }
 
 .active{
     background-color:#EDEDED;
-    width:20%;
+    width:40%;
 }
 
 container {

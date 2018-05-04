@@ -2,7 +2,7 @@ body{
     background-color:#F4F4F5;
     margin: 0;
     padding-top:0px;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Anaheim', sans-serif;
 }
 
 div#container{
@@ -23,16 +23,16 @@ header{
 header h1{
     text-align:center;
     padding:50px;
-    color:#78CED8;
+    color:#72C0C4;
     margin:0;
     font-size:20px;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Anaheim', sans-serif;
     text-decoration:none;
 }
 
 header h1 a{
     text-decoration:none;
-    color:#78CED8;
+    color:#7DC8CC;
 }
 
 div#content{
@@ -43,7 +43,7 @@ div#content{
     background-size:82%;
     background-color:#F4F4F5;
     clear:both;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Anaheim', sans-serif;
     text-align:center;
     font-size:14px;
     box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
@@ -59,7 +59,7 @@ div#content{
     background-color:#F4F4F5;
     clear:both;
     text-align:center;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Anaheim', sans-serif;
     font-size:14px;
     box-shadow: 0 2px 4px -6px #cbcbcb, 0 0 20px -22px #cbcbcb;
 
@@ -94,6 +94,8 @@ nav ul li a {
     padding: 5% 25%;
     text-decoration:none;
     width:40%;
+    white-space:nowrap;
+    overflow:hidden;
 }
 
 @media only screen and (max-width: 767px){
@@ -122,4 +124,20 @@ nav ul li a:hover{
 
 container {
     
+}
+
+h2 {
+    padding:20px;
+    text-align: center;
+    color:#7DC8CC;
+    font-size:30px;
+}
+
+p{
+    color:#60767A;
+}
+
+footer {
+    color:#60767A;
+    text-align:center;
 }

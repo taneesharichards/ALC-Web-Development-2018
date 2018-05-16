@@ -128,14 +128,22 @@ nav ul li a:hover{
     background-color: #ddd;
 }
 
-.skills {
+.skills{
     text-align:right;
     padding-right: 20px;
     line-height:40px;
 }
-.html {
-    width: 50%; background-color:
+.photoshop {
+    width: 80%;
+    background-color:#fff;
 }
+
+.premiere {
+    width: 60%;
+    background-color:#fff;
+}
+
+
 
 h2 {
     padding:20px;
@@ -177,19 +185,27 @@ h2 {
 }
 }
 
-#gallery{
-
+#galleryline1{
 }
 
 @media only screen and (max-width: 767px){
-#gallery{
+#galleryline1{
     overflow-x:auto;
-    white-space: nowrap;
+    white-space: normal;
+    display:inline-block;
+    padding:50px;
+    width:100%;
+    align-content: center;
+    align-items: center;
+    
 }
-#gallery-img{
+#galleryline1-img{
+/*
     display: inline-block;
     text-align:center;
     padding:14px;
+    margin:auto;
+*/
 }
     
 }
